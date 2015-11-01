@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html lang="fr" class="no-js old-ie ie8"><![endif]-->
+<!--[if IE 9]><html lang="fr" class="no-js old-ie ie9"><![endif]-->
+<html lang="fr_FR" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>La Poste</title>
+        <meta name="description" content="Courrier, colis, bureaux de poste, tarifs... Découvrez tous les services de La Poste, à destination des particuliers, des professionnels et des entreprises. Réalisez en quelques clics vos envois de courrier, lettres recommandées"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+                    <meta property="og:title" content="La Poste">
+                <meta property="og:site_name" content="La Poste">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="/images/common/logo-brand.png">
+        <meta property="og:url" content="http://www.laposte.net/images/video//ui-bg_gloss-wave_35_f6a828_500x100.png">
+
+        <link rel="stylesheet" href="/bundles/digitaslapostebase/css/vendor.css"/><link rel="stylesheet" href="/bundles/digitaslapostebase/css/bootstrap.css"/><link rel="stylesheet" href="/bundles/digitaslapostebase/css/consumers.css"/>
+        <link rel="shortcut icon" href="/bundles/digitaslapostebase/images/favicon.ico">
+
+        
+        <script src="/bundles/digitaslapostebase/js/vendor/modernizr.js"></script><script src="/bundles/pvrezcomment/js/yui/3.11.0/build/yui/yui-min.js"></script><script>var App = {settings: {}, i18n: {}};</script><script data-fyi="views/partials/app-config">
+
+  App.environment = 'prod';
+
+  App.i18n.errors = {
+    accept: 'Merci de saisir une valeur avec une extension valide.',
+    birthDay: 'Merci de saisir une valeur entre 01 et 31',
+    birthMonth: 'Merci de saisir une valeur entre 01 et 12',
+    birthYear: 'Merci de saisir une valeur entre 1900 et l\'année en cours',
+    calculatorNoResult: 'Aucun résultat',
+    calculatorRequired: 'Veuillez saisir le poids de votre envoi pour accéder au résultat',
+    calculatorValoremRequired: 'Veuillez saisir la valeur de votre envoi',
+    creditcard: 'Merci de saisir un numéro de carte de crédit valide.',
+    date: 'Merci de saisir une date valide.',
+    dateISO: 'Merci de saisir une date valide (ISO).',
+    digits: 'Merci de saisir que des chiffres.',
+    email: 'Merci de saisir une adresse email valide.',
+    equalTo: 'Les e-mails saisis doivent être identiques',
+    equalToPassword: 'Les mots de passe saisis doivent être identiques',
+    facteurplus: 'Le format du numéro d\'avis de passage est incorrect',
+    integer: 'Veuillez saisir une valeur valide. Les valeurs à saisir sont des nombres entiers',
+    firstname: 'Le format saisi n’est pas conforme',
+    lessThanValue1500: 'La valeur indiquée dépasse la limite autorisée. Maximum autorisé : 1 500',
+    lessThanValue2000: 'La valeur indiquée dépasse la limite autorisée. Maximum autorisé : 2 000',
+    lessThanValue20000: 'La valeur indiquée dépasse la limite autorisée. Maximum autorisé : 20 000',
+    lessThanValue3000: 'La valeur indiquée dépasse la limite autorisée. Maximum autorisé : 3 000',
+    lessThanValue30000: 'La valeur indiquée dépasse la limite autorisée. Maximum autorisé : 30 000',
+    max: 'Merci de saisir une valeur inférieure ou égale à {0}.',
+    maxlength: 'Merci de ne pas saisir plus de {0} caractères.',
+    min: 'Merci de saisir une valeur supérieure ou égale à {0}',
+    minlength: 'Merci de saisir au moins {0} caractères.',
+    number: 'Merci de saisir un nombre valide.',
+    niveauReco: 'Choisissez un niveau de recommandation',
+    numerosuivi: 'Merci de saisir un numero de suivi correct.',
+    numsuivi: 'Merci de saisir un numéro de suivi',
+    password: 'Le mot de passe n’est pas conforme. Il doit comprendre 8 caractères minimum et au moins un chiffre et une lettre',
+    pattern: 'Merci de saisir le champ au bon format',
+    phone: 'Merci de saisir un numéro de téléphone valide',
+    range: 'Merci de saisir une valeur comprise entre {0} et {1}.',
+    rangelength: 'Merci de saisir une valeur comprise entre {0} et {1} caractères.',
+    remote: 'Merci de corriger ce champ.',
+    required: 'Ce champ est obligatoire.',
+    selectCountry: 'Vous devez sélectionner un pays',
+    tryLater: 'Une erreur s\'est produite. Veuillez réessayer ultérieurement',
+    url: 'Merci de saisir une URL valide.',
+    zipcode: 'Merci de saisir un code postal valide.',
+    zipcodeOrCity: 'Merci de saisir un code postal ou une ville.',
+    selectCountry: 'Vous devez sélectionner un pays',
+    selectTerritory: 'Vous devez sélectionner un territoire',
+    autocompleteList: 'Veuillez sélectionner une adresse dans la liste',
+    autocompleteZip: 'Merci de préciser un code postal',
+    codeDemandeError: 'Code demande error - Mail not sent',
+    adult: 'Vous devez être majeur',
+    accepterCGU: 'Vous devez accepter les CGU.'
+  };
+
+  App.i18n.buttons = {
+    open: ' - ouvert',
+    closed: ' - fermé'
+  };
+
+  App.i18n.forms = {
+    selectCountry : 'Saisissez le pays de votre choix'
+  };
+
+  App.i18n.slider = {
+    paginate: 'diaporama n°{n}',
+    currentPage: 'diaporama n°{n} en cours'
+  };
+
+  App.i18n.datepicker = {
+    days        : [ 'Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi' ],
+    daysShort   : [ 'Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam' ],
+    daysMin     : [ 'Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa' ],
+    months      : [ 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre' ],
+    monthsShort : [ 'Jan', 'Fév', 'Mars', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sept', 'Oct', 'Nov', 'Déc' ],
+    today       : 'Aujourd\'hui',
+    clear       : 'Effacer',
+    format      : 'dd/mm/yyyy',
+    weekStart   : 1
+  };
+
+  var addthis_config = { ui_language: "fr" };
+
+  //document.domain = "www.laposte.net";
+
+</script><script data-fyi="views/partials/app-config">
+
+  App.i18n.webmail = {
+    domain: 'https://compte.laposte.net',
+    showEmptyMsg: 'Vous n\'avez pas de message non lu',
+    showMsg1: 'Vous avez ',
+    showMsg2singulier: ' message non lu',
+    showMsg2pluriel: ' courriers non lus'
+  };
+  App.i18n.buttons = {
+        open: ' - ouvert',
+        closed: ' - fermé'
+  };
+  App.config = {};
+  App.config.locator = {
+    pathCityssimoUrl: '/bundles/digitaslapostebase/json/cityssimo.json',
+    pathMerchantsUrl: "/outils/trouver-negociants",
+    pathCityssimo: '/bundles/digitaslapostebase/images/pins/cityssimo.png',
+    pathNegociant: '/bundles/digitaslapostebase/images/pins/negociant.png',
+    pathOffice: '/bundles/digitaslapostebase/images/pins/office.png',
+    rocsPathOffice: '/bundles/digitaslapostebase/images/pins/office.png',
+    pathCityColi: '/bundles/digitaslapostebase/images/pins/cityssimo_colissimo.png',
+    pathOfficeColi: '/bundles/digitaslapostebase/images/pins/office_colissimo.png',
+    pathShopColi: '/bundles/digitaslapostebase/images/pins/shop_colissimo.png',
+    env: '1'
+  };
+  App.config.favs = {
+    pathFavsUrl: '/bundles/digitaslapostebase/json/favourites.json'
+  };
+  App.config.findForeignPost = {
+    pathOffice: "/outils/trouver-pays"
+  };
+  App.config.findMuseums = {
+    pathOffice: "/outils/trouver-pays-musees"
+  };
+  
+  App.config.currentSpace = 'images'; 
+  App.WS = {
+    url: 'https://webservice.laposte.fr/api',
+    urlBP: '//www.laposte.fr/api',
+    urlIE8: 'http://www.laposte.fr/api',
+    urlIE9: 'http://www.laposte.fr/api',
+    urlCompanies: 'http://www.laposte.net',
+    urlCompaniesIE8: 'http://www.laposte.fr',
+    urlCompaniesIE9: 'http://www.laposte.fr',
+    postOfficeDetailUrlPrefix: '/particulier/outils/trouver-un-bureau-de-poste/bureau-detail/',
+    postOfficeCompanisDetailUrlPrefix: '/entreprise/outils/trouver-un-bureau-de-poste-entreprise/bureau-detail/',
+    zipcode: '/particulier/outils/getcommunes',
+    checkaddress: '/service-consommateurs/la-tournee-du-facteur/checkaddress',
+    apiKey: '5a87b191f508e4bae9d1d06e9e50c297',
+    applicationId: '4',
+    MGCon:'https://compte.laposte.net/ciblage-pub.do?choix=on',
+    MGCoff:'https://compte.laposte.net/ciblage-pub.do?choix=off',
+    adverlineon:'//adnext.fr/track.adv?rp=99914',
+    adverlineoff:'//adnext.fr/track.adv?donottrack=99914',
+    cookiesMessage: 'L\'option sélectionnée a été prise en compte',
+    cookiesMessageFail: 'L\'option sélectionnée n\'a pas été prise en compte',
+    urlRecygo: '/outils/calculateur-recygo-ajax',
+    urlDashRB: 'status-OK.json',
+    urlCheckConnection: '/bundles/digitaslapostebase/json/disconnected.json',
+    merchantDetailUrlPrefix: '/particulier/outils/trouver-un-point-de-retrait-ou-de-depot-colissimo/bureau-detail/'
+  };
+  App.i18n.datepicker = {
+    days        : [ 'Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi' ],
+    daysShort   : [ 'Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam' ],
+    daysMin     : [ 'Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa' ],
+    months      : [ 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre' ],
+    monthsShort : [ 'Jan', 'Fév', 'Mars', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sept', 'Oct', 'Nov', 'Déc' ],
+    today       : 'Aujourd\'hui',
+    clear       : 'Effacer',
+    format      : 'dd/mm/yyyy',
+    weekStart   : 1
+  };
+  App.datepicker = {
+  weekdays: ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'],
+  weekdaysMin: ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam','Dim'],
+  months: [ 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Decembre' ],
+  dateFormatSimpleDatapicker: 'dd/mm/yy',
+  dateTextFormatSimpleDatapicker: 'DD dd MM yy',
+  errorNotAllowed: 'The date is not allowed'
+  };
+
+  App.i18n.datepicker = {
+    days        : [ 'Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi' ],
+    daysShort   : [ 'Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam' ],
+    daysMin     : [ 'Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa' ],
+    months      : [ 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre' ],
+    monthsShort : [ 'Jan', 'Fév', 'Mars', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sept', 'Oct', 'Nov', 'Déc' ],
+    today       : 'Aujourd\'hui',
+    clear       : 'Effacer',
+    format      : 'dd/mm/yyyy',
+    weekStart   : 1
+  };
+  
+  App.pwplayer = {
+    autoplay : false,
+    uriTranslate: '/bundles/digitaslapostebase/videos/translate/fr.json',
+    uriTranscript:  null,
+    uriFlashFallbackFolder: '/bundles/digitaslapostebase/videos/altFlash',
+    uriAssetsFolder: '/bundles/digitaslapostebase/videos/img',
+    uriFlashFallbackVideoName: '/bundles/digitaslapostebase/videos/video.flv',
+    uriFlashFallbackTranscriptName: '/bundles/digitaslapostebase/videos/transcript.pdf',
+    prefixCss : ''
+  };
+
+  App.twitterConfig = {
+    href: 'https://twitter.com/lisalaposte',
+    timelineId: '560078484941570048',
+    owner: 'lisalaposte',
+    text: 'Tweets de @lisalaposte',
+    listSlug: 'la-poste-sur-twitter',
+    height: '1212'
+  };
+ 
+  App.iframe = {
+        containerID: 'iframe-ecomparateur',
+        url: 'http://ecocomparateur.colissimo.fr/iframe/intermediate.html?url=http://ecocomparateur.colissimo.fr/iframe'
+  };
+
+</script><script data-fyi="views/partials/app-config">
+
+
+  App.urls = {
+    disconnect: '/votre-compte/logout',
+    myaccount: '/votre-compte/accueil',
+    connect: '/votre-compte/authentification',
+    createAccount: '/votre-compte/authentification',
+    loginInscription: '/votre-compte/authentification',
+    imgConnected: '/bundles/digitaslaposteccu/images/ccu/user.png',
+    imgDisconnected: '/bundles/digitaslaposteccu/images/ccu/user.png',
+    imgRadioSuccess: '/bundles/digitaslaposteccu/images/common/radio-success.jpg',
+    findBP: '/votre-compte/favori/toggle/bureau'
+  };
+
+  App.urls.listCountries = '/bundles/digitaslapostecalculateurtarifs/json/mini_calculateur_tarifs_constraints.json';
+
+  App.cookies = {
+    favFindBp: 'fav-findBp',
+    favGeneral: 'fav-general',
+    login: 'laposte-login',
+    checkConnectionAuth: 'SSOAvailable',
+    sessionCountdown: 'sessionCountdown'
+  };
+
+  /* Default countdown limit in seconds */
+  App.countdown = {
+    limit: 720 // 12 minutes
+  }
+
+  App.text = {
+    favouritesAdd: 'Ajouter aux favoris',
+    favouritesRemove: 'Retirer des favoris',
+    nofavourites: 'Aucun favoris dans cette catégorie'
+  }
+
+  App.WS = App.WS || {};
+  App.WS.urlCheckConnection = 'http://www.laposte.net/api/ccu/check-user-connexion';
+  App.WS.urlDashRB = 'http://www.laposte.net/votre-compte/crm/quiz';
+  App.WS.urlContinueConnected = 'http://www.laposte.net/api/ccu/check-user-connexion';
+  App.WS.urlDisconnect = 'http://www.laposte.net/votre-compte/logout';
+
+  App.timeout = {
+     connectionLoader: 3000
+  }
+  
+  App.config.isCheckConnexionActivated = 1;
+</script>        <!--[if IE 8]><script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js")></script><![endif]-->
+    </head>
+    <body >
+                    <p class="sr-only">Barre unique de navigation</p>
+            <div id="nav-access" data-access-helper="visible">
+              <ul class="group-nav-helper">
+                <li><a href="#header-nav" title="Accéder au Menu Principal">Accéder au Menu Principal</a>
+                </li>
+                <li><a href="#content" title="Accéder au Contenu">Accéder au Contenu</a>
+                </li>
+                <li><a href="#footer" title="Accéder au Pied de page">Accéder au Pied de page</a>
+                </li>
+              </ul>
+            </div>
+                <div id="app">
+                        
+              
+
+ <div id="lp-metanav">
+        <div class="lp-metanav">
+          <div class="lp-metanav__wrapper">
+            <div class="lp-metanav__header">
+                                                <p class="lp-metanav__title">laposte.fr</p>
+                                                                                                                                                                                                                              </div>
+            <nav class="lp-metanav__menu">
+              <div class="menu">
+                <button type="button" class="menu__header">Particulier</button>
+                <ul class="menu__level1">
+                                                                                                   
+                                                                      <li class="menu__level1__element  current-element "><a                                                        data-tagging="{type:'CLICK', params: {'label':'meta_nav:la_poste.fr_particuliers:la_poste.fr_particuliers','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'} }" 
+                                                       
+                                                          onclick="javascript:return tc_events_1(this,'CLICK', {'label':'meta_nav::la_poste.fr_particuliers::la_poste.fr_particuliers','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'});" 
+                                                       href="https://logs1279.xiti.com/go.url?xts=527349&s2=1&p=meta_nav::laposte_fr::Particuliers&clic=N&type=click&url=http://www.laposte.fr/particulier" target="_self"  class="menu__level1__title">Particuliers</a></li>
+                                                                                                       
+                                                                      <li class="menu__level1__element "><a                                                        data-tagging="{type:'CLICK', params: {'label':'meta_nav:la_poste.fr_particuliers:la_poste.fr_professionnels','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'} }" 
+                                                       
+                                                          onclick="javascript:return tc_events_1(this,'CLICK', {'label':'meta_nav::la_poste.fr_particuliers::la_poste.fr_professionnels','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'});" 
+                                                       href="https://logs1279.xiti.com/go.url?xts=527349&s2=1&p=meta_nav::laposte_fr::Professionnels&clic=N&type=click&url=http://www.laposte.fr/professionnel" target="_self"  class="menu__level1__title">Professionnels</a></li>
+                                                                                                       
+                                                                      <li class="menu__level1__element "><a                                                        data-tagging="{type:'CLICK', params: {'label':'meta_nav:la_poste.fr_particuliers:la_poste.fr_entreprises','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'} }" 
+                                                       
+                                                          onclick="javascript:return tc_events_1(this,'CLICK', {'label':'meta_nav::la_poste.fr_particuliers::la_poste.fr_entreprises','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'});" 
+                                                       href="https://logs1279.xiti.com/go.url?xts=527349&s2=1&p=meta_nav::laposte_fr::Entreprises&clic=N&type=click&url=http://www.laposte.fr/entreprise" target="_self"  class="menu__level1__title">Entreprises</a></li>
+                                                                                                       
+                                                                      <li class="menu__level1__element "><a                                                        data-tagging="{type:'CLICK', params: {'label':'meta_nav:la_poste.fr_particuliers:la_poste.fr_e-commercants','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'} }" 
+                                                       
+                                                          onclick="javascript:return tc_events_1(this,'CLICK', {'label':'meta_nav::la_poste.fr_particuliers::la_poste.fr_e-commercants','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'});" 
+                                                       href="https://logs1279.xiti.com/go.url?xts=527349&s2=1&p=meta_nav::laposte_fr::E-commerçants&clic=N&type=click&url=http://www.laposte.fr/e-commercant" target="_self"  class="menu__level1__title">E-commerçants</a></li>
+                                                                                                       
+                                                                      <li class="menu__level1__element "><a                                                        data-tagging="{type:'CLICK', params: {'label':'meta_nav:la_poste.fr_collectionneurs:la_poste.fr_collectionneurs','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'} }" 
+                                                       
+                                                          onclick="javascript:return tc_events_1(this,'CLICK', {'label':'meta_nav::la_poste.fr_collectionneurs::la_poste.fr_collectionneurs','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'});" 
+                                                       href="https://logs1279.xiti.com/go.url?xts=527349&s2=1&p=meta_nav::laposte_fr::Collectionneurs&clic=N&type=click&url=http://www.laposte.fr/toutsurletimbre" target="_self"  class="menu__level1__title">Collectionneurs</a></li>
+                                                                                                                  </ul>
+              </div>
+              <div class="more">
+                                                                                                                                                                                                                                                                  <button type="button" class="more__title">Plus</button>
+                                           <ul class="more__level1">
+                                                                                               
+                                                  <li class="more__level1__element">
+                          <a   
+                                                        data-tagging="{type:'CLICK', params: {'label':'meta_nav:la_poste.fr_particuliers:chronopost.fr','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'} }" 
+                                                     
+                                                        onclick="javascript:return tc_events_1(this,'CLICK', {'label':'meta_nav::la_poste.fr_particuliers::chronopost.fr','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'});
+" 
+                                                    target="_blank" 
+                           
+                            title="Chronopost (nouvelle fenêtre)"
+                           
+                          href="https://logs1279.xiti.com/go.url?xts=527349&s2=1&p=meta_nav::laposte_fr::Chronopost&clic=N&type=click&url=http://www.chronopost.fr/transport-express/livraison-colis" class="more__level1__title">Chronopost</a> 
+                           
+                        </li>
+                                                                                               
+                                                  <li class="more__level1__element">
+                          <a   
+                                                        data-tagging="{type:'CLICK', params: {'label':'meta_nav:la_poste.fr_particuliers:labanquepostale.fr','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'} }" 
+                                                     
+                                                        onclick="javascript:return tc_events_1(this,'CLICK', {'label':'meta_nav::la_poste.fr_particuliers::labanquepostale.fr','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'});" 
+                                                    target="_blank" 
+                           
+                            title="La Banque Postale (nouvelle fenêtre)"
+                           
+                          href="https://logs1279.xiti.com/go.url?xts=527349&s2=1&p=meta_nav::laposte_fr::La_banque_Postale&clic=N&type=click&url=https://www.labanquepostale.fr/accueil.html" class="more__level1__title">La Banque Postale</a> 
+                           
+                        </li>
+                                                                                               
+                                                  <li class="more__level1__element">
+                          <a   
+                                                        data-tagging="{type:'CLICK', params: {'label':'meta_nav:la_poste.fr_particuliers:lapostemobile.fr','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'} }" 
+                                                     
+                                                        onclick="javascript:return tc_events_1(this,'CLICK', {'label':'meta_nav::la_poste.fr_particuliers::lapostemobile.fr','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'});" 
+                                                    target="_blank" 
+                           
+                            title="La Poste Mobile (nouvelle fenêtre)"
+                           
+                          href="https://logs1279.xiti.com/go.url?xts=527349&s2=1&p=meta_nav::laposte_fr::La_Poste_Mobile&clic=N&type=click&url=http://www.lapostemobile.fr/" class="more__level1__title">La Poste Mobile</a> 
+                                                      <hr>
+                           
+                        </li>
+                                                                                               
+                                                  <li class="more__level1__element">
+                          <a   
+                                                        data-tagging="{type:'CLICK', params: {'label':'meta_nav:la_poste.fr_particuliers:docapost.com','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'} }" 
+                                                     
+                                                        onclick="javascript:return tc_events_1(this,'CLICK', {'label':'meta_nav::la_poste.fr_particuliers::docapost.com','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'});" 
+                                                    target="_blank" 
+                           
+                            title="Docapost (nouvelle fenêtre)"
+                           
+                          href="https://logs1279.xiti.com/go.url?xts=527349&s2=1&p=meta_nav::laposte_fr::Docapost&clic=N&type=click&url=http://www.docapost.com/" class="more__level1__title">Docapost</a> 
+                           
+                        </li>
+                                                                                               
+                                                  <li class="more__level1__element">
+                          <a   
+                                                        data-tagging="{type:'CLICK', params: {'label':'meta_nav:la_poste.fr_particuliers:mediapost.fr','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'} }" 
+                                                     
+                                                        onclick="javascript:return tc_events_1(this,'CLICK', {'label':'meta_nav::la_poste.fr_particuliers::mediapost.fr','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'});" 
+                                                    target="_blank" 
+                           
+                            title="Mediapost (nouvelle fenêtre)"
+                           
+                          href="https://logs1279.xiti.com/go.url?xts=527349&s2=1&p=meta_nav::laposte_fr::Mediapost&clic=N&type=click&url=http://www.mediapost.fr/" class="more__level1__title">Mediapost</a> 
+                           
+                        </li>
+                                                                                               
+                                                  <li class="more__level1__element">
+                          <a   
+                                                        data-tagging="{type:'CLICK', params: {'label':'meta_nav:la_poste.fr_particuliers:viapost.fr','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'} }" 
+                                                     
+                                                        onclick="javascript:return tc_events_1(this,'CLICK', {'label':'meta_nav::la_poste.fr_particuliers::viapost.fr','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'});" 
+                                                    target="_blank" 
+                           
+                            title="Viapost (nouvelle fenêtre)"
+                           
+                          href="https://logs1279.xiti.com/go.url?xts=527349&s2=1&p=meta_nav::laposte_fr::Viapost&clic=N&type=click&url=http://www.viapost.fr/" class="more__level1__title">Viapost</a> 
+                           
+                        </li>
+                                                                                               
+                                                  <li class="more__level1__element">
+                          <a   
+                                                        data-tagging="{type:'CLICK', params: {'label':'meta_nav:la_poste.fr_particuliers:geopostgroup.com','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'} }" 
+                                                     
+                                                        onclick="javascript:return tc_events_1(this,'CLICK', {'label':'meta_nav::la_poste.fr_particuliers::geopostgroup.com','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'});" 
+                                                    target="_blank" 
+                           
+                            title="Geopost (nouvelle fenêtre)"
+                           
+                          href="https://logs1279.xiti.com/go.url?xts=527349&s2=1&p=meta_nav::laposte_fr::Geopost&clic=N&type=click&url=https://www.geopostgroup.com/" class="more__level1__title">Geopost</a> 
+                           
+                        </li>
+                                                                                               
+                                                  <li class="more__level1__element">
+                          <a   
+                                                        data-tagging="{type:'CLICK', params: {'label':'meta_nav:la_poste.fr_particuliers:asendia.com','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'} }" 
+                                                     
+                                                        onclick="javascript:return tc_events_1(this,'CLICK', {'label':'meta_nav::la_poste.fr_particuliers::asendia.com','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'});" 
+                                                    target="_blank" 
+                           
+                            title="Asendia (nouvelle fenêtre)"
+                           
+                          href="https://logs1279.xiti.com/go.url?xts=527349&s2=1&p=meta_nav::laposte_fr::Asendia&clic=N&type=click&url=http://www.asendia.com/en/" class="more__level1__title">Asendia</a> 
+                                                      <hr>
+                           
+                        </li>
+                                                                                               
+                                                  <li class="more__level1__element">
+                          <a   
+                                                        data-tagging="{type:'CLICK', params: {'label':'meta_nav:la_poste.fr_particuliers:legroupe.laposte.fr','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'} }" 
+                                                     
+                                                        onclick="javascript:return tc_events_1(this,'CLICK', {'label':'meta_nav::la_poste.fr_particuliers::legroupe.laposte.fr','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'});" 
+                                                    target="_blank" 
+                           
+                            title="Groupe La Poste (nouvelle fenêtre)"
+                           
+                          href="https://logs1279.xiti.com/go.url?xts=527349&s2=1&p=meta_nav::laposte_fr::Le_Groupe_La_Poste&clic=N&type=click&url=http://legroupe.laposte.fr/" class="more__level1__title">Groupe La Poste</a> 
+                           
+                        </li>
+                                                                                               
+                                                  <li class="more__level1__element">
+                          <a   
+                                                        data-tagging="{type:'CLICK', params: {'label':'meta_nav:la_poste.fr_particuliers:laposterecrute.fr','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'} }" 
+                                                     
+                                                        onclick="javascript:return tc_events_1(this,'CLICK', {'label':'meta_nav::la_poste.fr_particuliers::laposterecrute.fr','xtclick_event':'C','xtclick_s2':100,'xtclick_type':'N'});" 
+                                                    target="_blank" 
+                           
+                            title=" Candidats La Poste (nouvelle fenêtre)"
+                           
+                          href="https://logs1279.xiti.com/go.url?xts=527349&s2=1&p=meta_nav::laposte_fr::Candidats_La_Poste&clic=N&type=click&url=http://www.laposterecrute.fr/" class="more__level1__title">Candidats La Poste</a> 
+                           
+                        </li>
+                                            </ul>
+                                                                   </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+            <!-- Header area: START -->
+                <header id="header">
+        <div class="header-search-bar">
+            <div class="container-fluid">
+                <div class="vertical-center">
+                    <div class="vertical-center--wrapper">
+                                                     
+       
+ 
+<div class="brand">
+	<a href="/particulier" title="Retour à l'accueil">
+                         <img alt="La Poste" src="/bundles/digitaslapostebase/images/common/logo-companies.png"/>
+               </a>
+</div>                                            </div>
+                                             <div class="vertical-center--wrapper header-search-bar__search-group text-right">
+    <form action="/particulier/recherche" method="GET">
+      <div class="input-group">
+        <label for="searchProduct">Rechercher un produit</label>
+        <input id="searchProduct" type="search" name="s" value="" class="form-control" required="required" placeholder="Rechercher un produit, un service, un outil...">
+        <div class="input-group-btn">
+            <button aria-label="Rechercher" title="Rechercher" class="btn btn-default btn-gradient" type="submit"><span class="icon-search"></span></button>
+        </div>
+      </div>
+    </form>
+</div>
+                                    </div>
+            </div>
+        </div>
+    </header>
+            <!-- Header area: END -->
+
+                        
+            
+            <!-- Main area: START -->
+             <section id="content" class="lp-section-inner space-mvxl">
+     <div class="container-fluid">
+         <div class="col-xs-10 col-md-offset-1">
+             <div class="vertical-center">
+                 <div class="vertical-center--wrapper space-prl"><img src="/bundles/digitaslapostebase/images/common/server-error.gif" alt="Ooops" class="media-object"/></div>
+                 <div class="vertical-center--wrapper edito-bloc">
+                     <h1 class="h2">Nous sommes désolés : la page que vous souhaitez afficher n’est pas disponible.</h1>
+                     <p class="space-mtm"><a href="//www.laposte.fr" title="Retour à l’accueil laposte.fr" class="link link--chevron-right">Retour à l’accueil laposte.fr</a>
+                     </p>
+                 </div>
+             </div>
+         </div>
+     </div>
+</section>           
+            <!-- Main area: END -->
+
+            <!-- Footer area: START -->
+                        <!-- Footer area: END -->
+        </div>
+
+                    <script src="https://apis.google.com/js/platform.js" async="" defer="" gapi_processed="true">{lang: 'fr'}</script>
+            <script src="//assets.pinterest.com/js/pinit.js" type="text/javascript" async></script>
+            <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: fr_FR</script>
+            <script src="/bundles/digitaslapostebase/js/vendor.js"></script>
+                                        <!--base xiti -->
+<script type="text/javascript"> //<![CDATA[
+	if (tc_vars == null) {
+		var tc_vars = {
+																									    					    		            env_template : "404",		    		            env_work : "www.laposte.net",		    		            env_channel : "dev",		    		            env_dnt : "",		    		            user_id : "",		    		            user_gender : "",		    		            user_category_id : "",		    		            user_category : "",		    		            user_smb : "",		    		            user_logged : "",		    		            user_age : "",		    		            user_postalcode : "",		    		            page_cat1 : "",		    		            page_cat2 : "",		    		            page_cat3 : "",		    		            page_error : "",		    		            xiti_xtn2 : "8",		    		            xiti_page_name : "404",		    		            xiti_xtsite : "547787",		    		            xiti_xtpagetype : "",		    		            search_keywords : "",		    		            search_page_number : "",		    		            search_results_number : "",		    		            search_filters : "",		    		            nom_produit : "",		    		            nom_categorie_produit : "",		    		            type_RPS : "",		    		            gamme_produit : "",		    		            localisation_type_point : "",		    		            localisation_services_proposes : "",		    		            localisation_ou : "",		    		            nom_bureau_poste : "",		    		            type_bureau : "",		    		            ouverture_bureau_poste : "",		    		            recherche_cp_ville : "",		    		            saisie_cp_ville : "",		    		            resultats : "",		    		            provenance : "",		    		            tarif_depart : "",		    		            tarif_destination : "",		    		            tarif_nature_envois : "",		    		            tarif_recommandation : "",		    		            tarif_poids : "",		    		            newsletter_statut : "",		    		            newsletter_genre : "",		    		            newsletter_annee_naissance : ""		    		}
+	}
+//]]>
+</script>
+
+            <script src="https://cdn.tagcommander.com/1376/tc_Laposteportail_1.js" type="text/javascript"></script>
+<script src="https://cdn.tagcommander.com/1376/tc_Laposteportail_3.js" type="text/javascript"></script>
+<noscript><iframe src="https://redirect28.tagcommander.com/utils/noscript.php?id=1&mode=iframe&template_type=&page_name=&order_id=&order_amount=" width="1" height="1" aria-hidden="true"></iframe></noscript>
+
+            <script src="/bundles/digitaslapostebase/js/app-min.js"></script>
+            <script src="/bundles/digitaslapostebase/js/custom-xiti.js"></script>
+            </body>
+</html>
